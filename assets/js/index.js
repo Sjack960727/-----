@@ -1,4 +1,4 @@
-const getUersInfo = () => {
+function getUersInfo() {
   $.ajax({
     type: "GET",
     url: "/my/userinfo",
@@ -13,7 +13,7 @@ const getUersInfo = () => {
       renderAvatar(res.data);
     },
   });
-};
+}
 const renderAvatar = (user) => {
   // 获取用户名字
   let name = user.nickname || user.username;
